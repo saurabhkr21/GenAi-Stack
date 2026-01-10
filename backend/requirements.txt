@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pydantic
+requests
+python-multipart
+python-dotenv
+chromadb
+openai
+google-generativeai
+pymupdf
+beautifulsoup4
+sqlalchemy
+prometheus-fastapi-instrumentator
+python-json-logger
+psycopg2-binary
