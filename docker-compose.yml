@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: genai-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - /app/venv
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DATABASE_URL=sqlite:///./sql_app.db
+    # networks:
+    #   - genai-network
+
+  frontend:
+    build: ./frontend
+    container_name: genai-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    # networks:
+    #   - genai-network
+
+    # networks:
+    #   genai-network:
+    #     driver: bridge
