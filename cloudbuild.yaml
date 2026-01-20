@@ -15,3 +15,4 @@ images:
 # Optional: Enable parallel builds
 options:
   machineType: 'N1_HIGHCPU_8'
+  logging: CLOUD_LOGGING_ONLY
